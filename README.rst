@@ -4,6 +4,8 @@ Simple Flask App
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
+
+
 - Rozpocząnając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedyńczej aplikacji w python-ie:
 
   ::
@@ -11,6 +13,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     # ubuntu, add to ~/.bashrc
     $ source /usr/local/bin/virtualenvwrapper.sh
+
+    #MAKEFILE
 
     # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
     $ mkvirtualenv wsb-simple-flask-app
