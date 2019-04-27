@@ -106,8 +106,7 @@ Centos
     $ yum install -y docker-ce
     $ systemctl start docker
 
-    .. image:: https://www.travis-ci.org/karinabirecka/se_hello_printer_app.svg?branch=master
-    :target: https://www.travis-ci.org/karinabirecka/se_hello_printer_app
+  
 
 Materiały
 =========
