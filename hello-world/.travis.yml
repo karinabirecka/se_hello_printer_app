@@ -1,0 +1,16 @@
+language: python
+services:
+  - docker
+python:
+  - "2.7"
+install:
+  - make deps
+script:
+  - make lint
+  - make test
+  - make docker_build
+  - make docker_push
+deploy:
+  provider: heroku
+  app: sheltered-beyond-63260
+  api_key: 0ff721eb-3714-4a9e-8e0a-ee4aa3c0a771  
