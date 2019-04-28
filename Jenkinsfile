@@ -19,8 +19,11 @@ pipeline {
                   failed(failureThreshold: '1')
                   ],
                   tools: [
-                    JUnit(JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'test_results.xml',
-skipNoTestFiles: false, stopProcessingIfError: true)
+                    JUnit(JUnit(deleteOutputFiles: true,
+                      failIfNotNew: true,
+                      pattern: 'test_results.xml',
+                      skipNoTestFiles: false,
+                      stopProcessingIfError: true)
                   ]
             }
 
@@ -29,10 +32,19 @@ skipNoTestFiles: false, stopProcessingIfError: true)
     }
     post{
         always{
-            cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'coverage.xml',
-            conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets:
-            '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII',
+            cobertura autoUpdateHealth: false,
+            autoUpdateStability: false,
+            coberturaReportFile: 'coverage.xml',
+            conditionalCoverageTargets: '70, 0, 0',
+            failUnhealthy: false,
+            failUnstable: false,
+            lineCoverageTargets: '80, 0, 0',
+            maxNumberOfBuilds: 0,
+            methodCoverageTargets: '80, 0, 0',
+            onlyStable: false,
+            sourceEncoding: 'ASCII',
             zoomCoverageChart: false
+
         }
     }
 }
